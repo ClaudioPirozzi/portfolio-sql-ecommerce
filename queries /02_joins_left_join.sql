@@ -22,9 +22,9 @@ SELECT c.full_name,
    SELECT  p.product_id,
            p.product_name,
            p.category
-   v FROM products AS p
-	     LEFT JOIN order_items AS oi
-         ON oi.product_id = p.product_id
+     FROM products AS p
+	      LEFT JOIN order_items AS oi
+          ON oi.product_id = p.product_id
 	WHERE oi.order_item_id IS NULL 
     ORDER BY p.product_name;
     
